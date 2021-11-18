@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 function HomeScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
+      <Text>Ian McKean Pinetum</Text>
     </View>
   );
 }
@@ -17,11 +17,20 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ title: 'My home' }}
-        />
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          title: 'Ian McKean Pinetum',
+          headerStyle: {
+            backgroundColor: '#1f363d',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      />
       </Stack.Navigator>
     </NavigationContainer>
   );
