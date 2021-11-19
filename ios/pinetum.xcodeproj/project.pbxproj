@@ -12,8 +12,10 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		441FF4A02CEA88E61F3DB8B8 /* libPods-pinetum-pinetumTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA2CEDE1399E9EE1300FE90 /* libPods-pinetum-pinetumTests.a */; };
+		4C9171C8F13F795B12E9CB29 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE58311595E87CA4DD7249E /* ExpoModulesProvider.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		DE874A5AFCCDC3ECB28F008D /* libPods-pinetum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9330A60DB1F63CAC699BFBD /* libPods-pinetum.a */; };
+		EB2837A9B0A8E1E77EF759E6 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36BB904B18D0D8FAC09D60 /* ExpoModulesProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +38,12 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = pinetum/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = pinetum/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = pinetum/main.m; sourceTree = "<group>"; };
+		1A36BB904B18D0D8FAC09D60 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-pinetum-pinetumTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		50E1CD18AD3D8B690B6B144E /* Pods-pinetum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinetum.release.xcconfig"; path = "Target Support Files/Pods-pinetum/Pods-pinetum.release.xcconfig"; sourceTree = "<group>"; };
 		54206E71B913D8BDDD7E6DD5 /* Pods-pinetum-pinetumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinetum-pinetumTests.debug.xcconfig"; path = "Target Support Files/Pods-pinetum-pinetumTests/Pods-pinetum-pinetumTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7AA2CEDE1399E9EE1300FE90 /* libPods-pinetum-pinetumTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pinetum-pinetumTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = pinetum/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9AE58311595E87CA4DD7249E /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-pinetum/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		C0EFE4C433591E7C7ECE6D1B /* Pods-pinetum-pinetumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinetum-pinetumTests.release.xcconfig"; path = "Target Support Files/Pods-pinetum-pinetumTests/Pods-pinetum-pinetumTests.release.xcconfig"; sourceTree = "<group>"; };
 		C99E857B254652A2E6372022 /* Pods-pinetum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinetum.debug.xcconfig"; path = "Target Support Files/Pods-pinetum/Pods-pinetum.debug.xcconfig"; sourceTree = "<group>"; };
 		D9330A60DB1F63CAC699BFBD /* libPods-pinetum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pinetum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +100,15 @@
 			name = pinetum;
 			sourceTree = "<group>";
 		};
+		1C9435C34309BD5B204F6100 /* ExpoModulesProviders */ = {
+			isa = PBXGroup;
+			children = (
+				369A0916DA57E2D44852260C /* pinetum */,
+				DFC7BE1DC794E35C01C74C8B /* pinetumTests */,
+			);
+			name = ExpoModulesProviders;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +117,14 @@
 				7AA2CEDE1399E9EE1300FE90 /* libPods-pinetum-pinetumTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		369A0916DA57E2D44852260C /* pinetum */ = {
+			isa = PBXGroup;
+			children = (
+				9AE58311595E87CA4DD7249E /* ExpoModulesProvider.swift */,
+			);
+			name = pinetum;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -122,6 +143,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				FC7348306911B205EFC72B1B /* Pods */,
+				1C9435C34309BD5B204F6100 /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -135,6 +157,14 @@
 				00E356EE1AD99517003FC87E /* pinetumTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DFC7BE1DC794E35C01C74C8B /* pinetumTests */ = {
+			isa = PBXGroup;
+			children = (
+				1A36BB904B18D0D8FAC09D60 /* ExpoModulesProvider.swift */,
+			);
+			name = pinetumTests;
 			sourceTree = "<group>";
 		};
 		FC7348306911B205EFC72B1B /* Pods */ = {
@@ -404,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E356F31AD99517003FC87E /* pinetumTests.m in Sources */,
+				EB2837A9B0A8E1E77EF759E6 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +444,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				4C9171C8F13F795B12E9CB29 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +469,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = pinetumTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,7 +493,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = pinetumTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -577,7 +609,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -636,7 +668,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
