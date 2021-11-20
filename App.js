@@ -1,31 +1,66 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image, StyleSheet, SafeAreaView, ScrollView, StatusBar} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Dimensions } from 'react-native';
+
+
+import {
+  TouchableOpacity,
+  
+} from "react-native";
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 function Feed() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Feed!</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#40798c'}}>
+    <View>
+      <Text style={styles.titleText}>Ian McKean Pinetum</Text>
     </View>
+    <View>
+    <Image
+        style={styles.banner}
+        source={{
+          uri: 'https://www.irongates.co.nz/uploads/2/4/6/2/24622109/dsc5583_orig.jpg',
+        }}
+      />
+    </View>
+    <Text>Welcome to Ian McKean Pinetum - where you’ll discover the largest collection of conifers in the Southern Hemisphere
+
+Founded in 1958, this pinetum is a lifetime of work by farmer and tree-enthusiast Rawhiti “Ian” McKean. The collection includes more than 300 species of conifers, including 90 of the 110 recognised pine, and is planted across 14 hectares of rugged hill-country land on the McKean family farm. Today, it is part of Queen Elizabeth II Trust and open for everyone to enjoy.</Text>
+    </View>
+    
   );
 }
 
 function Profile() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>For questions regarding the pinetum contact Alexander McKean at (TODO:THIS)</Text>
-      <Text>If you encounter an error when using this App please send a message to Daniel Murphy danielmurphycs@gmail.com)</Text>
-    </View>
+    <View style={{flex:1,justifyContent: "center",alignItems: "center"}}>
+    <Text>This App was created in React Native </Text>
+    <Text>To report a problem with the App please contact:</Text>
+    <Text style= {{textDecorationLine: 'underline'}}>danielmurphycs@gmail.com</Text>
+</View>
   );
 }
 
 function Notifications() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Notifications!</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+    <ScrollView style={styles.scrollView}>
+      <Text style={styles.text}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum.
+      </Text>
+    </ScrollView>
+  </SafeAreaView>
   );
 }
 
@@ -80,3 +115,20 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  box: {
+    width: windowWidth,
+    height: windowHeight/2,
+  },
+  titleText: {
+    fontSize: 50,
+    fontWeight: "bold",
+    color:'white',
+    textAlign: "center"
+  },
+  banner: {
+    width: windowWidth,
+    height: windowHeight/2,
+  }
+});
