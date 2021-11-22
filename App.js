@@ -1,12 +1,13 @@
 import * as React from 'react';
 import {
-  Text, View, Image, StyleSheet, SafeAreaView, ScrollView, StatusBar, Dimensions ,
-  TouchableOpacity,
+  Text, View, Image, StyleSheet, Button, SafeAreaView, ScrollView, StatusBar, Dimensions ,
+  TouchableOpacity, Linking
 
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import openMap from 'react-native-open-maps';
 
 
 const windowWidth = Dimensions.get('window').width;
@@ -28,9 +29,15 @@ const Feed = function () {
         />
       </View>
       <Text style={styles.bodyText}>
-      {`Welcome to Ian McKean Pinetum - where you’ll discover the largest collection of conifers in the Southern Hemisphere.\n\n Founded in 1958, this pinetum is a lifetime of work by farmer and tree-enthusiast Rawhiti “Ian” McKean. The collection includes more than 300 species of conifers, including 90 of the 110 recognised pine, and is planted across 14 hectares of rugged hill-country land on the McKean family farm. Today, it is part of Queen Elizabeth II Trust and open for everyone to enjoy.`}
+      {`Welcome to Ian McKean Pinetum - where you’ll discover the largest collection of conifers in the Southern Hemisphere.\n\n Founded in 1958, this pinetum is a lifetime of work by farmer and tree-enthusiast Rawhiti “Ian” McKean. The collection includes more than 300 species of conifers, including 90 of the 110 recognised pine, and is planted across 14 hectares of rugged hill-country land on the McKean family farm. \n\n\ Today, it is part of Queen Elizabeth II Trust and open for everyone to enjoy.`}
       </Text>
- 
+      <TouchableOpacity
+          style={styles.mapButton}
+          onPress={() => Linking.openURL('maps://app?saddr=-39.64892+175.5983062&daddr=-39.881479+175.9642263')}
+          >
+          <Text style={styles.mapButtonText}>Get Directions
+			</Text>
+</TouchableOpacity>
     </ScrollView>
     </SafeAreaView>
 
@@ -54,7 +61,9 @@ const Notifications = function () {
   );
 };
 
+
 const Tab = createBottomTabNavigator();
+
 
 const MyTabs = function () {
   return (
@@ -118,8 +127,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   banner: {
-    width: windowWidth,
+    width: windowWidth - windowWidth*.05,
     height: windowHeight / 2,
+    alignSelf: 'center',
+    borderWidth: 1,
+    borderColor: "black",
+    borderRadius: 25,
+    
   },
   container: {
     backgroundColor:'#40798c'
@@ -131,5 +145,19 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     backgroundColor: 'white',
     margin:10
-  }
+  },
+  mapButton: {
+    width: 200,
+    marginTop: 20,
+    backgroundColor: "#1f363d",
+    padding: 15,
+    borderRadius: 10,
+    alignSelf: 'center'
+  },
+  mapButtonText: {
+    color: "white",
+    fontSize: 20,
+    justifyContent: "center",
+    textAlign: "center",
+  },
 });
