@@ -33,7 +33,7 @@ const Feed = function () {
       </Text>
       <TouchableOpacity
           style={styles.mapButton}
-          onPress={() => Linking.openURL('maps://app?saddr=-39.64892+175.5983062&daddr=-39.881479+175.9642263')}
+          onPress={() => Linking.openURL('maps://app?&daddr=-39.881479+175.9642263')}
           >
           <Text style={styles.mapButtonText}>Get Directions
 			</Text>
