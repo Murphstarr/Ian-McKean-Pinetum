@@ -7,8 +7,9 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import Geolocation from 'react-native-geolocation-service'
 import openMap from 'react-native-open-maps';
-
+import TreeIdentifier from './TreeIdentifier';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -55,11 +56,6 @@ const Profile = function () {
   );
 };
 
-const Notifications = function () {
-  return (
-    <Text>Under Construction :)</Text>
-  );
-};
 
 
 const Tab = createBottomTabNavigator();
@@ -85,7 +81,7 @@ const MyTabs = function () {
       />
       <Tab.Screen
         name="Tree Identifier"
-        component={Notifications}
+        component={TreeIdentifier}
         options={{
           tabBarLabel: 'Tree Identifier',
           tabBarIcon: ({ color, size }) => (
