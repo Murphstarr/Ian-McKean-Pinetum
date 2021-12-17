@@ -10,6 +10,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Geolocation from 'react-native-geolocation-service'
 import openMap from 'react-native-open-maps';
 import TreeIdentifier from './TreeIdentifier';
+import TreeProfile from './TreeProfile'
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -58,7 +59,7 @@ const Profile = function () {
 
 const TreeList = function () {
   return (
-    <Text>testing</Text>
+    <TreeProfile></TreeProfile>
   
 
   )
