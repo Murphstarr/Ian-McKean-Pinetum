@@ -56,6 +56,15 @@ const Profile = function () {
   );
 };
 
+const TreeList = function () {
+  return (
+    <Text>testing</Text>
+  
+
+  )
+                                       
+}
+
 
 
 const Tab = createBottomTabNavigator();
@@ -86,6 +95,16 @@ const MyTabs = function () {
           tabBarLabel: 'Tree Identifier',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="tree" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Test"
+        component={TreeList}
+        options={{
+          tabBarLabel: 'Tree List',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="database" color={color} size={size} />
           ),
         }}
       />
